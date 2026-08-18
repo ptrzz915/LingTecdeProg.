@@ -1,16 +1,1 @@
-#include <stdio.h>
-#include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-	
-	int primeiro, segundo, aux;
-	printf("Insira o primeiro valor: \n");
-	scanf("%d", &primeiro);
-	printf("Insira o segundo valor: \n");
-	scanf("%d", &segundo);
-	
-	aux = primeiro;
-	primeiro = segundo;
-	segundo = aux;
-	
-	printf("%d \n%d", primeiro, segundo);
