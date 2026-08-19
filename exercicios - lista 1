@@ -1,165 +1,153 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-int main(int argc, char *argv[]) {
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <math.h>
 	
-	// exercício 1
-
-	int primeiro, segundo, aux;
-	printf("Insira o primeiro valor: \n");
-	scanf("%d", &primeiro);
-	printf("Insira o segundo valor: \n");
-	scanf("%d", &segundo);
+	int main(int argc, char *argv[]) {
+		
+		// exercício 1
 	
-	aux = primeiro;
-	primeiro = segundo;
-	segundo = aux;
+		int primeiro, segundo, aux;
+		printf("Insira o primeiro valor: \n");
+		scanf("%d", &primeiro);
+		printf("Insira o segundo valor: \n");
+		scanf("%d", &segundo);
+		
+		aux = primeiro;
+		primeiro = segundo;
+		segundo = aux;
+		
+		printf("%d \n%d", primeiro, segundo);
 	
-	printf("%d \n%d", primeiro, segundo);
-
-
-	// exercicio 2
-
-	double numero, mantissa;
-	int expoente;
 	
-	printf("Digite um valor: \n");
-	scanf("%lf", &numero);
+		// exercicio 2
 	
-	expoente = (int)floor(log10(fabs(numero)));
-	mantissa = numero / pow(10, expoente);
+		double numero, mantissa;
+		int expoente;
+		
+		printf("Digite um valor: \n");
+		scanf("%lf", &numero);
+		
+		expoente = (int)floor(log10(fabs(numero)));
+		mantissa = numero / pow(10, expoente);
+		
+		printf("%.5fe^%d\n", mantissa, expoente);
+		
+		return 0;
 	
-	printf("%.5fe^%d\n", mantissa, expoente);
+		// exercicio 3
 	
-	return 0;
-
-	// exercicio 3
-
-	int n, valor, resto;
-    int b64, b32, b16, b8, b4, b2, b1;
-
-    printf("Digite um numero positivo menor que 65:/n ");
-    scanf("%d", &n);
-
-    if (n > 64) {
-        printf("Numero invalido!\n");
-        return 1;
-	} else if (n < 0) {
-		printf("Numero invalido!\n");
-		return 1;
+		int n, valor, resto;
+	    int b64, b32, b16, b8, b4, b2, b1;
+	
+	    printf("Digite um numero positivo menor que 65:/n ");
+	    scanf("%d", &n);
+	
+	    if (n > 64) {
+	        printf("Numero invalido!\n");
+	        return 1;
+		} else if (n < 0) {
+			printf("Numero invalido!\n");
+			return 1;
+		}
+	
+	    valor = n;
+	
+	    b64 = valor / 64;
+	    resto = valor % 64;
+	    valor = resto;
+	
+	    b32 = valor / 32;
+	    resto = valor % 32;
+	    valor = resto;
+	
+	    b16 = valor / 16;
+	    resto = valor % 16;
+	    valor = resto;
+	
+	    b8 = valor / 8;
+	    resto = valor % 8;
+	    valor = resto;
+	
+	    b4 = valor / 4;
+	    resto = valor % 4;
+	    valor = resto;
+	
+	    b2 = valor / 2;
+	    resto = valor % 2;
+	    valor = resto;
+	
+	    b1 = valor / 1;
+	
+	    printf("Valor em binario: ");
+	
+	    if (b64 == 1) { printf("%d", b64); } else {printf("%d", b64);}
+	    if (b32 == 1) { printf("%d", b32); } else {printf("%d", b32);}
+	    if (b16 == 1) { printf("%d", b16); } else {printf("%d", b16);}
+	    if (b8  == 1) { printf("%d", b8);  } else {printf("%d", b8);}
+	    if (b4  == 1) { printf("%d", b4);  } else {printf("%d", b4);}
+	    if (b2  == 1) { printf("%d", b2);  } else {printf("%d", b2);}
+	    if (b1  == 1) { printf("%d", b1);  } else {printf("%d", b1);}
+	
+	    printf("\n");
+	
+	
+	// exercicio 4
+	    
+	    float salario, vendas, comissao, total;
+	    
+	    printf("Quanto voce ganha de salario: \n");
+	    scanf("%f", &salario);
+	    
+	    printf("Qual o valor das vendas esse mes: \n");
+	    scanf("%f", &vendas);
+	
+	    comissao = 0.15 * (salario + vendas);
+	    
+	    total = comissao + salario;
+	    
+	    printf("Esse e seu salario: \n%.2f \n", total);
+	
+	
+	
+	// exercicio 5
+	
+	    int numero1, numero2, numero3, numero4, soma;
+	    double media, produto;
+	
+	    printf("Primeiro numero: \n");
+	    scanf("%d", &numero1);
+	    printf("Segundo numero: \n");
+	    scanf("%d", &numero2);
+	    printf("Terceiro numero: \n");
+	    scanf("%d", &numero3);
+	    printf("Quarto e ultimo numero: \n");
+	    scanf("%d", &numero4);
+	
+	    soma = numero1 + numero2 + numero3 + numero4;
+	    media = (numero1 + numero2 + numero3 + numero4) / 4;
+	    produto = 1;
+	    produto = produto * numero1;
+	    produto = produto * numero2;
+	    produto = produto * numero3;
+	    produto = produto * numero4;
+	
+	    printf("O valor da soma e: %d\n", soma);
+	    printf("O valor da media e: %.2lf\n", media);
+	    printf("O valor do produtorio e: %.2lf\n", produto);
+	
+	
+	// exercicio 6
+	    int dias_totais, anos, meses, dias, resto;
+	    printf("Digite sua idade em dias: n");
+	    scanf("%d", dias_totais);
+	
+	    anos = dias_totais / 365;
+	    resto = dias_totais % 365; 
+	
+	    meses = resto / 30;
+	    dias = resto % 30;
+	
+	    printf("%d ano(s), %d mes(es) e %d dia(s)", anos, meses, dias);
+	
+	    return 0;
 	}
-
-    valor = n;
-
-    b64 = valor / 64;
-    resto = valor % 64;
-    valor = resto;
-
-    b32 = valor / 32;
-    resto = valor % 32;
-    valor = resto;
-
-    b16 = valor / 16;
-    resto = valor % 16;
-    valor = resto;
-
-    b8 = valor / 8;
-    resto = valor % 8;
-    valor = resto;
-
-    b4 = valor / 4;
-    resto = valor % 4;
-    valor = resto;
-
-    b2 = valor / 2;
-    resto = valor % 2;
-    valor = resto;
-
-    b1 = valor / 1;
-
-    printf("Valor em binario: ");
-
-    if (b64 == 1) { printf("%d", b64); } else {printf("%d", b64);}
-    if (b32 == 1) { printf("%d", b32); } else {printf("%d", b32);}
-    if (b16 == 1) { printf("%d", b16); } else {printf("%d", b16);}
-    if (b8  == 1) { printf("%d", b8);  } else {printf("%d", b8);}
-    if (b4  == 1) { printf("%d", b4);  } else {printf("%d", b4);}
-    if (b2  == 1) { printf("%d", b2);  } else {printf("%d", b2);}
-    if (b1  == 1) { printf("%d", b1);  } else {printf("%d", b1);}
-
-    printf("\n");
-
-
-// exercicio 4
-    
-    float salario, vendas, comissao, total;
-    
-    printf("Quanto voce ganha de salario: \n");
-    scanf("%f", &salario);
-    
-    printf("Qual o valor das vendas esse mes: \n");
-    scanf("%f", &vendas);
-
-    comissao = 0.15 * (salario + vendas);
-    
-    total = comissao + salario;
-    
-    printf("Esse e seu salario: \n%.2f \n", total);
-
-
-
-// exercicio 5
-
-    int numero1, numero2, numero3, numero4, soma;
-    double media, produto;
-
-    printf("Primeiro numero: /n");
-    scanf("%f", &numero1);
-    printf("Segundo numero: /n");
-    scanf("%f", &numero2);
-    printf("Terceiro numero: /n");
-    scanf("%f", &numero3);
-    printf("Quarto e ultimo numero");
-    scanf("%f", &numero4);
-
-    soma = numero1 + numero2 + numero3 + numero4;
-    media = (numero1 + numero2 + numero3 + numero4) / 4;
-    produto = 1;
-    produto = produto * numero1;
-    produto = produto * numero2;
-    produto = produto * numero3;
-    produto = produto * numero4;
-
-    printf("O valor da soma e: %d", soma);
-    printf("O valor da media e: %lf", media);
-    printf("O valor do produtorio e: %.2lf", produto);
-
-
-// exercicio 6
-    int dias_totais, anos, meses, dias, resto;
-    printf("Digite sua idade em dias: n");
-    scanf("%d", dias_totais);
-
-    anos = dias_totais / 365;
-    resto = dias_totais % 365; 
-
-    meses = resto / 30;
-    dias = resto % 30;
-
-    printf("%d ano(s), %d mes(es) e %d dia(s)", anos, meses, dias);
-
-
-
-
-
-
-
-
-
-
-
-
-
-    return 0;
-}
