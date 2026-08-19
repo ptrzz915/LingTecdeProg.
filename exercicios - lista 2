@@ -1,0 +1,103 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char *argv[]) {
+	
+	// exercicio 1
+	
+	printf("Exercicio 1\n");
+	
+	int anos, nasc;
+	
+	printf("Digite a sua idade: \n");
+	scanf("%d", &anos);
+	
+	nasc = 2026 - anos;
+	
+	printf("Voce nasceu em: %d", nasc);
+	
+	// exercicio 2
+	
+	printf("\nExercicio 2\n");
+	
+	int km;
+	float m;
+	printf("Digite a velocidade em km/h: \n");
+	scanf("%d", &km);
+	
+	m = km / 3.6;
+	
+	printf("A velocidade em m/s e: %.2f", m);
+	
+	// exercicio 3
+	
+	printf("\nExercicio 3\n");
+	
+	float reais, cotacao, dolar;
+	printf("Quantos reais voce tem? \n");
+	scanf("%f", &reais);
+	cotacao = 0.19;
+	
+	dolar = reais * cotacao;
+	
+	printf("Voce tem %.2f dolares", dolar);
+
+	// exercicio 4
+	
+	printf("\nExercicio 4\n");
+	
+	float Cel, Far;
+	printf("Digite a temperatura em graus Celsius: \n");
+	scanf("%f", &Cel);
+	
+	Far = Cel * (9.0/5.0) + 32.0;
+	
+	printf("A temperatura em Farenheit e %f", Far);
+
+	// exercicio 5	
+	
+	printf("\nExercicio 5\n");
+	
+	int graus;
+	double pi, radiano;
+	printf("Digite o angulo em graus: \n");
+	scanf("%d", &graus);
+	pi = 3.141592;
+	
+	radiano = graus * pi/180.0;
+	
+	printf("O valor em radianos e: %lf", radiano);
+
+	// exercicio 6
+	
+	printf("\nExercicio 6\n");
+	
+	int valor, ant, suc;
+	printf("Digite um valor: \n");
+	scanf("%d", &valor);
+	
+	ant = valor + 1;
+	suc = valor - 1;
+	
+	printf("Antecessor: %d\nSucessor: %d", ant, suc);
+	
+	// exercicio 7
+	
+	printf("\nExercicio 7\n");
+	
+	double total, primeiro, segundo, terceiro;
+	total = 780000.00;
+	
+	primeiro = total * 0.46;  
+	segundo = total * 0.32;
+	terceiro = total - (primeiro + segundo);
+	
+	printf("O primeiro colocado vai ganhar: %.2lf\n", primeiro);
+	printf("O segundo colocado vai ganhar: %.2lf\n", segundo);
+	printf("O terceiro colocado vai ganhar: %.2lf\n", terceiro);
+  
+	// exercicio 8	
+	
+	return 0;
+}
