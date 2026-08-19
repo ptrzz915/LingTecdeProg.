@@ -134,5 +134,32 @@ int main(int argc, char *argv[]) {
     printf("O valor da soma e: %d", soma);
     printf("O valor da media e: %lf", media);
     printf("O valor do produtorio e: %.2lf", produto);
+
+
+// exercicio 6
+    int dias_totais, anos, meses, dias, resto;
+    printf("Digite sua idade em dias: n");
+    scanf("%d", dias_totais);
+
+    anos = dias_totais / 365;
+    resto = dias_totais % 365; 
+
+    meses = resto / 30;
+    dias = resto % 30;
+
+    printf("%d ano(s), %d mes(es) e %d dia(s)", anos, meses, dias);
+
+
+
+
+
+
+
+
+
+
+
+
+
     return 0;
 }
