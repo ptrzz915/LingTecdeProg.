@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
 	int n, valor, resto;
     int b64, b32, b16, b8, b4, b2, b1;
 
-    printf("Digite um numero positivo (n <= 64): ");
+    printf("Digite um numero positivo menor que 65:/n ");
     scanf("%d", &n);
 
     if (n > 64) {
@@ -90,5 +90,49 @@ int main(int argc, char *argv[]) {
 
     printf("\n");
 
+
+// exercicio 4
+    
+    float salario, vendas, comissao, total;
+    
+    printf("Quanto voce ganha de salario: \n");
+    scanf("%f", &salario);
+    
+    printf("Qual o valor das vendas esse mes: \n");
+    scanf("%f", &vendas);
+
+    comissao = 0.15 * (salario + vendas);
+    
+    total = comissao + salario;
+    
+    printf("Esse e seu salario: \n%.2f \n", total);
+
+
+
+// exercicio 5
+
+    int numero1, numero2, numero3, numero4, soma;
+    double media, produto;
+
+    printf("Primeiro numero: /n");
+    scanf("%f", &numero1);
+    printf("Segundo numero: /n");
+    scanf("%f", &numero2);
+    printf("Terceiro numero: /n");
+    scanf("%f", &numero3);
+    printf("Quarto e ultimo numero");
+    scanf("%f", &numero4);
+
+    soma = numero1 + numero2 + numero3 + numero4;
+    media = (numero1 + numero2 + numero3 + numero4) / 4;
+    produto = 1;
+    produto = produto * numero1;
+    produto = produto * numero2;
+    produto = produto * numero3;
+    produto = produto * numero4;
+
+    printf("O valor da soma e: %d", soma);
+    printf("O valor da media e: %lf", media);
+    printf("O valor do produtorio e: %.2lf", produto);
     return 0;
 }
