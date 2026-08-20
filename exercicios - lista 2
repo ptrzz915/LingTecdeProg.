@@ -99,5 +99,48 @@ int main(int argc, char *argv[]) {
   
 	// exercicio 8	
 	
+	printf("\nExercicio 8\n");
+	
+	int s, horas, minutos, segundos;
+	
+	printf("Digite um valor em segundos: \n");
+	scanf("%d", &s);
+	
+	horas = s / 3600;
+	minutos = (s % 3600) / 60;
+	segundos = s % 60;
+	
+	printf("Sao %d horas, %d minutos e %d segundos", horas, minutos, segundos);
+	
+	// exercicio 9
+	
+	printf("\nExercicio 9\n");
+	
+	int tempo, velocidade; 
+	float distancia, litros;
+	printf("Digite o tempo de viagem em horas: \n");
+	scanf("%d", &tempo);
+	printf("Digite a velocidade durante a viagem em km/h: \n");
+	scanf("%d", &velocidade);
+	
+	distancia = velocidade * tempo;
+	
+	litros = distancia / 12;
+	
+	printf("A quantidade de litros gastos foi: %.3f", litros);
+
+	// exercicio 10
+	
+	printf("\nExercicio 10\n");
+	
+	int a, b, c, d, maior, maior_temp;
+	printf("Digite tres valores: ");
+	scanf ("%d %d %d", &a,&b,&c);
+	
+	maior_temp = (a+b+abs(a-b)) / 2;
+	maior = (maior_temp+c+abs(maior_temp-c))/2;
+	
+	printf("O maior entre |%d|%d|%d| = %d", a,b,c, maior);
+	
 	return 0;
 }
