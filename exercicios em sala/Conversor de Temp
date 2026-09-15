@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float conv_celsius(float valor_celsius) {
+	(valor_celsius * 9/5) + 32;
+}
+
+float conv_faren(float valor_faren) {
+	(valor_faren - 32) * 5/9;
+}
+
+int main(int argc, char *argv[]) {
+	int escolha;
+	float valor_faren, valor_celsius, temp_cels, temp_faren;
+	
+	printf("Escolha qual conversao quer fazer:\n");
+	printf("1: Celsius para Farenheit; \n2: Farenheit para Celsius; \n");
+	scanf("%d", &escolha);
+	
+	switch (escolha) {
+		case 1:
+			printf("Qual o valor a ser convertido?");
+			scanf("%f", &temp_cels);
+			temp_faren = conv_celsius(valor_celsius);
+			printf("A temperatura em Farenheit eh: %f", temp_faren);
+		break;
+	
+		case 2:
+			printf("Qual o valor a ser convertido?");
+			scanf("%f", &temp_faren);
+			temp_cels = conv_faren(valor_faren);
+			printf("A temperatura em Cels eh: %f", temp_cels);
+		break;
+		
+	}
+	return 0;
+}
