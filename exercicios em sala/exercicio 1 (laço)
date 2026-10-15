@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int inicio, fim, passo;
+    int i;
+
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &inicio);
+
+    printf("Digite o segundo valor: ");
+    scanf("%d", &fim);
+
+    printf("Digite o passo da contagem: ");
+    scanf("%d", &passo);
+
+    i = inicio + passo; 
+
+    while (i < fim) {
+        printf("%d ", i);
+        i += passo;
+    }
+
+    printf("\n");
+    return 0;
+}
