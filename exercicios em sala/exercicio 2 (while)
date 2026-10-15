@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int linhas, i, j, espaco, valor;
+
+    printf("Digite o numero de linhas para o Triangulo de Pascal: ");
+    scanf("%d", &linhas);
+
+    for (i = 0; i < linhas; i++) {
+        valor = 1; 
+        for (espaco = 1; espaco <= linhas - i; espaco++) {
+            printf("  "); 
+        }
+
+        for (j = 0; j <= i; j++) {
+            printf("%4d", valor);
+            valor = valor * (i - j) / (j + 1);
+        }
+        
+        printf("\n");
+    }
+
+    return 0;
+}
