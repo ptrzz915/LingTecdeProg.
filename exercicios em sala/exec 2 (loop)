@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    double soma = 0.0;
+    double termo = 0.5; 
+
+    printf("Digite o numero de termos (N) a serem somados: ");
+    scanf("%d", &n);
+
+    
+    for (i = 1; i <= n; i++) {
+        soma += termo;  
+        termo /= 2.0;   
+    }
+
+    printf("A soma dos %d primeiros termos da sequencia e: %f\n", n, soma);
+
+    return 0;
+}
